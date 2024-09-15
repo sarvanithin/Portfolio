@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add viewport meta tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/05f1bca9fd.js" crossorigin="anonymous"></script>
+    <title>Nithin Sarva</title>
+</head>
+
+<body>
+    <svg onclick="openNav();" style="fill:white;" class="toggle-btn" viewBox="0 0 100 80" width="40" height="40">
+        <rect width="100" height="20"></rect>
+        <rect y="30" width="100" height="20"></rect>
+        <rect y="60" width="100" height="20"></rect>
+      </svg>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="item" onclick="closeNav()" href="#">Home</a>
+        <a class="item" onclick="closeNav()" href="#about">About</a>
+        <a class="item" onclick="closeNav()" href="#projects">Projects</a>
+        <a class="item" onclick="closeNav()" href="#feedback">Contact Me</a>
+    </div>
+    <div id="particles-js" class="hero">
+        <div class="circle-image">
+            <img src="media/who.jpeg" alt="Profile Image">
+        </div>
+        <h1 id="title"> <span id="mm">Nithin Sarva</span></h1>
+        <h2>Grad Student at George Washington University | Data Science</h2>
+        <a id="download-resume" style="margin-left:20px;" href="https://drive.google.com/file/d/1K5GzV66FeKDR0Eqr5TL0TFWaeQdjrCHe/view?usp=sharing" target="_blank" download>Resume</a>
+        <!-- <a id="know-more"  href="#about">Know more <span class="bg"></span></a> -->
+        <div class="social-icons">
+            <a style="margin-left:-20px;" href="https://github.com/sarvanithin" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a style="margin-left:20px;" href="https://www.linkedin.com/in/nithin-sarva/" class="icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a style="margin-left:60px;" href="https://instagram.com/nithin_sarva" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    </div>
+    <div class="about">
+        <div class="text" id="about">
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">Who am I?</h1>
+            <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" src="media/profile.jpeg" class="img-fluid float-start shadow p-1 mb-2" width="50%" alt="...">
+            <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">
+                
+                I'm passionate about data and technology, diving deep into data science, full stack development, and AI during the day. When I'm off the clock, I’m exploring new coding techniques or hanging out with friends. In my downtime, you’ll find me reading tech blogs, catching up on the latest in data trends, or enjoying a good thriller novel. I’m all about creative brainstorming for the next big project, whether it's a new web app or mastering predictive analytics.
+
+                
+                <br><strong>#DataDriven #TechExplorer</strong>
+            </p>
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">Education</h1>
+        <div class="projectcards">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>MS (Data analytics), George Washington University</h2><br>
+                <p></p>
+                <p>Coursework : Programming for Data analytics, Machine Learning,Deep Learning, Computer Software Architecture, Computer Vision and Software Engineering</p><br>
+                <!-- <div class="buttons"><a class="shadow-lg" target="_blank" href="https://universal-weather.netlify.app/">Live Demo</a><a class="shadow-lg" target="_blank" href="#weatherapp-js">Repo</a></div> -->
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>BTech (Computer Science, Data Science), MLR Institue Of Technology </h2><br>
+                <p>Thesis : Mental health Prediction through screening and chatbot interventions</p>
+                <p>Coursework: SQL, Data Mining, Data analytics,Cloud computing, Operating Systems, Database Management System, Software Oriented Architecture,Data Structures and Algorithms,Big Data, AI, Advanced Data Structures for Machine Learning</p><br>
+                <!-- <div class="buttons"><a class="shadow-lg" target="_blank" href="https://the-clock.netlify.app/">Live Demo</a><a class="shadow-lg" target="_blank" href="#Js-Clock">Repo</a></div> -->
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">Experience</h1>
+        <div class="projectcards">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>Marshal company(Data Science Engineer)</h2><br>
+                
+                <p>Delighted to share that I contributed as an Data Science Engineer ,Utilized cutting-edge technologies like OpenAI, Vertex AI, and TensorFlow to enhance ReX, our AI Coach. Crafted intelligent solutions, providing personalized career guidance and mentorship to learners. #PastAchievements #AIEngineer #ArtificialIntelligence.</p><br>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>Wobblrr (Data Science Engineer Intern)</h2><br>
+                <p>Conducted data analysis and modelling, developed data-driven solutions, and synthesized insights for data-informed decisions.
+                </p><br>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>Wobblrr (Web Developer Intern)</h2><br>
+                <p>Managed UI using HTML, CSS, JavaScript, and databases, creating reusable components, and optimizing web app performance
+                    through CSS and JS minification.</p><br>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>BFlockchain technologies (Software developer Intern)</h2><br>
+                <p>Led redevelopment of 10+ projects, transforming legacy UI to modern, responsive design with data visualization, SEO, and
+                    performance enhancements.</p><br>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div id="projects" class="projects">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">Projects</h1>
+
+        <div class="projectcards">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>Mental health Prediction through Screeing and Chatbot Interventions</h2><br>
+                <img src="media/mental.png" alt="Project Image">
+                <p>This project offers a cutting-edge, affordable mental health platform powered by machine learning. It analyzes diverse data, from files and questionnaires to APIs, to detect mental health issues. Users receive personalized insights through age-specific questions and unique factors like music preferences and screen time. An emotionally intelligent chatbot then provides tailored support, adapting to the user’s emotional state for meaningful interaction.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Mental_health_detection">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Pharma Supply Chain Trading Platform</h2><br>
+                <img src="media/pharma.png" alt="Project Image">
+                <p>This project delivers a comprehensive UX prototype for a pharma supply chain trading platform, designed to streamline the interaction between manufacturers, distributors, and logistics providers. The platform addresses key challenges in pharmaceutical distribution, focusing on real-time order tracking, cold chain monitoring, and supply chain analytics.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Pharma-Supply-Chain-Trading-Platform">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> AI ChatBot</h2><br>
+                <img src="media/chatbot.jpeg" alt="Project Image">
+                <p>Conversational AI Model This project showcases my work on building a sophisticated Conversational AI model as part of my Artificial Intelligence assignment. Leveraging the power of TensorFlow and the tflearn library, I employed Natural Language Processing and Neural Network concepts to construct an AI contextual chatbot.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/AI-chat-bot-">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>Attendance Marking Using Facial Recognition </h2><br>
+                <img src="media/facial.jpeg" alt="Project Image">
+                <p>Welcome to the Face Detection and Data Addition System! This robust solution is designed for detecting faces in video, verifying them against a predefined dataset, and updating a CSV file with relevant data.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Attendance-Marking-Using-Facial-Recognition-">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> React Weather App Project </h2><br>
+                <img src="data:image/jpeg;base64,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" alt="Project Image">
+                <p>This project explores the application of blockchain in open science, showcasing its potential as an infrastructure. The focus is on secure transactions using blockchain for financial transactions between friends. </p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Weather-forecast-">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2>Predictive analytics for UI/UX development</h2><br>
+                <img src="https://geekopedia.me/wp-content/uploads/2020/05/MOBILE-UI_UX.png" alt="Project Image">
+                <p>
+                    Leveraging predictive analytics to enhance UI/UX design allows for a deeper understanding of user behavior and more effective design decisions. By analyzing user interaction data, the system uncovers patterns and predicts engagement, helping to optimize layout, navigation, and content.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Predictive-analytics-for-UI-UX-developemnt-">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> cryptocurrency-prediction</h2><br>
+                <img src="media/crypto.jpeg" alt="Project Image">
+                <p>Predicting the crypto currency using Neural Network.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Crypto-Currency-Prediction">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> RL Algorithms with Real-World Uncertainties</h2><br>
+                <img src="./media/RL.png" alt="Project Image">
+                <p>Enhanced agent decision-making for Q-learning and ActorCritic algorithms by introducing real-world uncertainties such as wind noise and engine failures.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="#">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> drowsiness Detection</h2><br>
+                <img src="media/frowsiness.jpeg" alt="Project Image">
+                <p>Drowsiness Detector using Python. College Project with all Documents.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Drowsiness-Detection">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> chatgpt Comparision</h2><br>
+                <img src="media/chatgpt.jpeg" alt="Project Image">
+                <p>ChatGPT Comparison Detection Project Overview The ChatGPT Comparison Detection Project aims to develop a system that identifies and analyzes comparisons within text data. Leveraging the capabilities of ChatGPT, a state-of-the-art language model, this project offers a solution for detecting and understanding comparative statements.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/ChatGPT-Comparison">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Face Detection</h2><br>
+                <img src="media/face detection open cv.jpeg" alt="Project Image">
+                <p>Face Detecton In Python Using OpenCV.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Face-Detection-">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Heart Failure Prediction</h2><br>
+                <img src="media/heart.jpeg" alt="Project Image">
+                <p>Heart failure is a critical medical condition that requires timely intervention. This project aims to predict heart failure in patients using machine learning algorithms. Early detection can lead to better patient care and outcomes.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Heart-Failure-Prediction-/tree/main">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Chronic Kidney Disease analysis using data mining classification techniques</h2><br>
+                <img src="media/linkedin clone.png" alt="Project Image">
+                <p>This project is a replication of the popular professional networking platform LinkedIn, aiming to emulate its features and functionalities.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Chronic-Kidney-Disease">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Whatsapp GPT</h2><br>
+                <img src="media/whatsapp gpt.png" alt="Project Image">
+                <p>WhatsApp-GPT WhatsApp-GPT is a project that integrates ChatGPT with WhatsApp using a Golang library. The setup involves running WhatsApp from a phone number using the Golang library and concurrently running a dedicated browser in another window to control ChatGPT.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/What-sApp-GPT">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Video Surveillance and tracking system using Facial Recognition</h2><br>
+                <img src="media/video survailaince.jpeg" alt="Project Image">
+                <p>Connect all CCTV cameras to this system to track someone's live location in a premise using facial recognition. It can be also used to maintain records of people entering a premise using their face instead of bio-metrics/cards/manual Entry. This system when used with national criminal database can track criminals and prevent mishaps.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Video-Surveillance-and-Tracking-System">Github Link</a></div> 
+            </div>
+            
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Stock market prediction using Reinforcement Learning</h2><br>
+                <img src="media/stock.png" alt="Project Image">
+                <p>Trying out reinforcement agents to predict stock market for 3 interested companies.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Stock-Market-Prediction-">Github Link</a></div> 
+            </div>
+            
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Student login page</h2><br>
+                <img src="media/student.png" alt="Project Image">
+                <p>studentActivity
+                    All Purpose Student Activity Website</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Student-Portal-">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Spam Mail Detector using ML</h2><br>
+                <img src="media/spam.png" alt="Project Image">
+                <p>This project is a spam email detection system built using machine learning algorithms from scikit-learn. Spam emails can be a significant problem, and having an automated system to detect and filter them out can be invaluable.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Spam-Mail-Detection-">Github Link</a></div> 
+            </div>
+            
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> E-commerce website</E-Commewree></h2><br>
+                <img src="media/download.jpeg" alt="Project Image">
+                <p>This project consists of two Flask applications that leverage ImageAI's image prediction algorithms and object detection models for object recognition and analysis in images and videos. The apps, Image Object Recognition Flask Application and Video Object Detection Flask Application, provide an intuitive platform for users to explore, analyze, and extract information from visual content.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/E-commerce">Github Link</a></div> 
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                <h2> Mini Chatgpt Model</h2><br>
+                <img src="media/mini.jpeg" alt="Project Image">
+                <p>minGPT is a PyTorch re-implementation of GPT, covering both training and inference. The primary goals of minGPT are to be small, clean, interpretable, and educational. Unlike some sprawling GPT implementations, minGPT maintains simplicity, with the entire codebase consisting of approximately 300 lines of code (refer to mingpt/model.py). The core concept involves a sequence of indices fed into a Transformer, producing a probability distribution over the next index in the sequence. The implementation focuses on clever batching, both across examples and sequence length, for efficiency.</p><br>
+                <div class="buttons"><a class="shadow-lg" target="_blank" href="https://github.com/sarvanithin/Mini-GPT-Model">Github Link</a></div> 
+            </div>
+        </div>
+        <div id="projects" class="projects">
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">Skills</h1>
+            <div class="projectcards">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                    <h2>Languages & Databases </h2><br>
+                    <p>Java, Python, C/C++, R, SQL, NoSQL, JavaScript, TypeScript, HTML/CSS</p><br>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                    <h2>Frameworks & Libraries</h2><br>
+                    <p>Kubernetes, Docker, Kafka, ElasticSearch, Spring Boot, ROS, OpenCV, TensorFlow, PyTorch, Keras, Scikit-Learn, Pandas, NumPy, AWS Services, MATLAB, GitLab CI/CD</p><br>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                    <h2>AI/ML Libraries and Image Processing</h2><br>
+                    <p> OpenCV, TensorFlow, PyTorch, Keras, Scikit-learn, Pandas, Numpy, Computer Vision, NLP, CNNs, LSTM, Word2Vec, Transfer Learning, Reinforcement Learning, GANs</p><br>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                    <h2>Blockchain</h2><br>
+                    <p> Ethereum, Hyperledger Fabric, Hedera Hashgraph, ReactJS, NodeJS</p><br>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                    <h2>Additional Skills</h2><br>
+                    <p> Excel, Data Analysis, Predictive Modeling, Anomaly Detection, Time Series Forecasting, Statistical Analysis, Visualization, Software Engineering</p><br>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="card shadow-lg">
+                    <h2>Project Management</h2><br>
+                    <p>Project Planning, Task Management, SCRUM & Agile Methodology</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="feedback" class="feedback">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">Contact Me</h1><br><br>
+        <form action="mailto:sarvanithin@gmail.com" method="POST" enctype="text/plain">
+            <input class="shadow" type="email" name="email" placeholder="Email" required>
+            <input class="shadow" type="text" name="name" placeholder="Name" required>
+            <textarea class="shadow feed" name="message" placeholder="Message" required></textarea>
+            <input class="shadow btn btn-secondary send" type="submit" value="Send">
+        </form>
+        
+    </div>
+    <div class="footer">
+        <div class="mlinks">
+            <a target="_blank" href="https://github.com/sarvanithin"><i class="fab fa-github-square"></i></a>
+        </div>
+        <p id="copy">&copy;</p>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
