@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add viewport meta tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/05f1bca9fd.js" crossorigin="anonymous"></script>
+    <title>Nithin Sarva | Data Scientist & AI Engineer</title>
+    <meta name="description" content="Nithin Sarva - Data Scientist, AI Engineer, and Full-Stack Developer specializing in Machine Learning, Deep Learning, and Data Analytics">
+    <meta name="keywords" content="Data Science, AI, Machine Learning, Python, TensorFlow, PyTorch">
+</head>
+
+<body data-theme="light">
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+    
+    <svg onclick="openNav();" class="toggle-btn" viewBox="0 0 100 80" width="40" height="40">
+        <rect width="100" height="20"></rect>
+        <rect y="30" width="100" height="20"></rect>
+        <rect y="60" width="100" height="20"></rect>
+      </svg>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="item" onclick="closeNav()" href="#">Home</a>
+        <a class="item" onclick="closeNav()" href="#about">About</a>
+        <a class="item" onclick="closeNav()" href="#education">Education</a>
+        <a class="item" onclick="closeNav()" href="#experience">Experience</a>
+        <a class="item" onclick="closeNav()" href="#projects">Projects</a>
+        <a class="item" onclick="closeNav()" href="#skills">Skills</a>
+        <a class="item" onclick="closeNav()" href="#feedback">Contact Me</a>
+    </div>
+    <div class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="circle-image">
+                <img src="media/who.jpeg" alt="Nithin Sarva - Data Scientist Profile Image">
+            </div>
+            <h1 id="title"><span id="mm">Nithin Sarva</span></h1>           
+            <h2 class="typing-animation">
+                <span class="constant-text">MS Data Analytics | </span>
+                <span class="typed-text"></span>
+                <span class="cursor">&nbsp;</span>
+            </h2>
+            <p class="hero-subtitle">Transforming Data into Intelligent Solutions</p>
+            <a id="download-resume" href="https://drive.google.com/file/d/1eWNupSzHeDzMU6DL8mevjpQbi-N_HVVd/view?usp=sharing" target="_blank" download>
+                <i class="fas fa-download"></i> Resume
+            </a>
+            <div class="social-icons">
+                <a href="https://github.com/sarvanithin" class="icon" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nithin-sarva/" class="icon" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/nithin_sarva" class="icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="text" id="about">
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Who am I?</h1>
+            <div class="about-content">
+                <img data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" src="media/profile.jpeg" alt="Nithin Sarva - Data Scientist">
+                <div class="about-text">
+                    <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">
+                        I'm a passionate Data Scientist and AI Engineer with expertise in machine learning, deep learning, and full-stack development. Currently pursuing my MS in Data Analytics at George Washington University, I specialize in transforming complex datasets into actionable insights and building intelligent systems that solve real-world problems.
+                    </p>
+                    <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200" data-aos-once="true">
+                        My experience spans across cutting-edge technologies including TensorFlow, PyTorch, computer vision, NLP, and cloud platforms. I thrive on tackling challenging problems in healthcare, finance, and technology sectors, always staying at the forefront of AI innovation.
+                    </p>
+                    <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1400" data-aos-once="true">
+                        <strong>#DataScience #AI #MachineLearning #Innovation</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="education" class="projects">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Education</h1>
+        <div class="projectcards">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="card shadow-lg">
+                <h2>MS (Data Analytics), George Washington University</h2><br>
+
+                <!-- Achievement Badge -->
+                <div class="achievement-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h3 class="badge-title">Graduate Research Assistantship & Fellowship Award</h3>
+                        <p class="badge-details">Awarded by George Washington University | Academic Year 2025-2026</p>
+                        <p class="badge-description">Grant-funded Graduate Research Assistantship supporting applied data analytics and machine learning research.</p>
+                    </div>
+                </div>
+
+                <p>Coursework: Programming for Data Analytics, Machine Learning, Deep Learning, Computer Software Architecture, Computer Vision and Software Engineering</p><br>
+                <!-- <div class="buttons"><a class="shadow-lg" target="_blank" href="https://universal-weather.netlify.app/">Live Demo</a><a class="shadow-lg" target="_blank" href="#weatherapp-js">Repo</a></div> -->
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="card shadow-lg">
+                <h2>BTech (Data Science), MLR Institute Of Technology</h2><br>
+
+                <!-- Thesis Badge -->
+                <div class="achievement-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h3 class="badge-title">Undergraduate Thesis Project</h3>
+                        <p class="badge-details">Research Focus: Healthcare AI & Natural Language Processing</p>
+                        <p class="badge-description">Mental Health Prediction through screening and chatbot interventions</p>
+                    </div>
+                </div>
+
+                <p>Coursework: SQL, Data Mining, Data Analytics, Cloud Computing, Operating Systems, Database Management System, Software Oriented Architecture, Data Structures and Algorithms, Big Data, AI, Advanced Data Structures for Machine Learning</p><br>
+                <!-- <div class="buttons"><a class="shadow-lg" target="_blank" href="https://the-clock.netlify.app/">Live Demo</a><a class="shadow-lg" target="_blank" href="#Js-Clock">Repo</a></div> -->
+            </div>
+        </div>
+    </div>
+    <div id="experience" class="projects">
+        <h1 data-aos="fade-up" data-aos-duration="300" data-aos-once="true">Professional Experiences</h1>
+        <div class="professional-timeline">
+            <!-- Current Positions (Present) -->
+            <div class="experience-item current" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot current"></div>
+                <div class="experience-card">
+                    <div class="company-header">CENTER FOR GLOBAL MENTAL HEALTH EQUITY</div>
+                    <div class="role-title">Research Specialist III</div>
+                    <div class="period">Present | Washington D.C.</div>
+                    <ul class="achievements">
+                        <li>Architected EQUIP-SU platform using Django framework with AI-powered predictive analytics for mental health screening</li>
+                        <li>Implemented transfer learning models that adapt to different cultural contexts across 3 continents</li>
+                        <li>Built robust ETL pipelines enabling seamless collaboration between international research teams</li>
+                        <li>Developed CI/CD workflows ensuring reliable deployment of mental health technology solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item current" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot current"></div>
+                <div class="experience-card">
+                    <div class="company-header">GW EMSE DEPARTMENT</div>
+                    <div class="role-title">Graduate Research Assistant (GRA)</div>
+                    <div class="period">Present | Washington D.C.</div>
+                    <ul class="achievements">
+                        <li>Conducting advanced research at the intersection of data science and systems engineering</li>
+                        <li>Developing machine learning algorithms for engineering problem-solving applications</li>
+                        <li>Analyzing complex datasets to identify patterns and insights for breakthrough innovations</li>
+                        <li>Contributing to academic research initiatives in data analytics and predictive modeling</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent/Completed Positions (2025) -->
+            <div class="experience-item current" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot current"></div>
+                <div class="experience-card">
+                    <div class="company-header">DATA SCIENCE FOR SUSTAINABLE DEVELOPMENT</div>
+                    <div class="role-title">Software Engineering Consultant</div>
+                    <div class="period">Feb 2025 - June 2025 | Washington D.C.</div>
+                    <ul class="achievements">
+                        <li>Optimized SQL queries for UN platform backend, achieving 17% performance improvement in data processing speeds</li>
+                        <li>Implemented PostgreSQL optimization strategies and AWS CloudWatch monitoring for real-time performance tracking</li>
+                        <li>Collaborated with international development teams to enhance sustainable development data analytics platform</li>
+                        <li>Developed automated performance tuning solutions that reduced query execution time from minutes to seconds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Past Positions (2023-2022, Most Recent First) -->
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot past"></div>
+                <div class="experience-card">
+                    <div class="company-header">MARSHAL COMPANY</div>
+                    <div class="role-title">Data Engineer Intern</div>
+                    <div class="period">Jun 2023 - Aug 2023 | North Carolina</div>
+                    <ul class="achievements">
+                        <li>Optimized enterprise-level data pipelines, reducing ML model training time by 70%</li>
+                        <li>Built parallel processing workflows using AWS EC2 for enhanced computational efficiency</li>
+                        <li>Implemented comprehensive data validation frameworks ensuring data quality and reliability</li>
+                        <li>Developed ETL workflows that streamlined data processing from multiple enterprise sources</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot past"></div>
+                <div class="experience-card">
+                    <div class="company-header">WOBBLRR</div>
+                    <div class="role-title">Data Science Engineer Intern</div>
+                    <div class="period">2023 | Remote</div>
+                    <ul class="achievements">
+                        <li>Developed AI solutions using OpenAI GPT models and Google Vertex AI for personalized user experiences</li>
+                        <li>Implemented TensorFlow-based machine learning models for intelligent recommendation systems</li>
+                        <li>Created data modeling frameworks that transformed raw data into actionable business insights</li>
+                        <li>Built end-to-end AI development pipelines from data ingestion to model deployment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot past"></div>
+                <div class="experience-card">
+                    <div class="company-header">WOBBLRR</div>
+                    <div class="role-title">Web Developer Intern</div>
+                    <div class="period">2023 | Remote</div>
+                    <ul class="achievements">
+                        <li>Transformed static designs into responsive, interactive web applications with optimal user experience</li>
+                        <li>Developed reusable component libraries that improved development efficiency by 40%</li>
+                        <li>Optimized web application performance, reducing load times and enhancing user engagement</li>
+                        <li>Integrated database management systems with frontend interfaces for seamless data flow</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="300">
+                <div class="timeline-dot past"></div>
+                <div class="experience-card">
+                    <div class="company-header">BFLOCKCHAIN TECHNOLOGIES</div>
+                    <div class="role-title">Software Developer Intern</div>
+                    <div class="period">2022 | Remote</div>
+                    <ul class="achievements">
+                        <li>Modernized 10+ legacy blockchain projects with contemporary UI/UX design principles</li>
+                        <li>Implemented responsive design frameworks improving cross-device compatibility</li>
+                        <li>Created interactive data visualizations that enhanced user understanding of blockchain analytics</li>
+                        <li>Executed comprehensive legacy system migration to modern web technologies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>    <div id="projects" class="projects">
+        <h1 data-aos="fade-up" data-aos-duration="300" data-aos-once="true">Featured Projects</h1>
+        
+        <div class="projects-container">
+            <div class="projectcards" id="featured-projects">
+                <!-- Featured Project 1 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card">
+                    <div class="project-image">
+                        <img src="media/mental.png" alt="AI Mental Health System">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Mental Health Prediction System</h3>
+                        <p>Advanced ML-driven healthcare solution that revolutionizes mental health screening through intelligent data analysis. Achieves 94% accuracy in predicting mental health conditions using multi-modal data and features an emotionally-aware chatbot for personalized therapeutic interventions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Healthcare AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/Mental_health_detection" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 2 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card">
+                    <div class="project-image">
+                        <img src="media/pharma.png" alt="Pharma Supply Chain Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Pharma Supply Chain Trading Platform</h3>
+                        <p>Comprehensive UX prototype for pharmaceutical supply chain management, streamlining interactions between manufacturers, distributors, and logistics providers. Features real-time order tracking, cold chain monitoring, and advanced supply chain analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UX Design</span>
+                            <span class="tech-tag">Supply Chain</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Healthcare</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/Pharma-Supply-Chain-Trading-Platform" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 3 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card">
+                    <div class="project-image">
+                        <img src="media/chatbot.jpeg" alt="AI Conversational Bot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Intelligent Conversational AI System</h3>
+                        <p>Sophisticated conversational AI model built with TensorFlow and tflearn library. Employs advanced Natural Language Processing and Neural Network concepts to create a contextual chatbot capable of meaningful human-like interactions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Neural Networks</span>
+                            <span class="tech-tag">Chatbot</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/AI-chat-bot-" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 4 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card">
+                    <div class="project-image">
+                        <img src="media/facial.jpeg" alt="Facial Recognition System">
+                    </div>
+                    <div class="project-content">
+                        <h3>Advanced Facial Recognition Attendance System</h3>
+                        <p>Real-time attendance marking system using cutting-edge facial recognition technology. Implements computer vision algorithms for accurate face detection and recognition, providing seamless and contactless attendance tracking for educational institutions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/Attendance-Marking-Using-Facial-Recognition-" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 5 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card">
+                    <div class="project-image">
+                        <img src="media/stock.png" alt="Stock Market Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3>Reinforcement Learning Stock Prediction</h3>
+                        <p>Advanced stock market prediction system using reinforcement learning algorithms. Leverages deep Q-learning and policy gradient methods to analyze market patterns and make intelligent trading decisions with real-time market data integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Reinforcement Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Finance</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/Stock-Market-Prediction-" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 6 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card">
+                    <div class="project-image">
+                        <img src="media/download.jpeg" alt="React Weather Application">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dynamic React Weather Application</h3>
+                        <p>Modern, responsive weather application built with React.js featuring real-time weather data, interactive maps, and detailed forecasts. Implements clean UI/UX design principles with seamless API integration for accurate weather information.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/Weather-forecast-" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Project 1 - Hidden by default -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="media/crypto.jpeg" alt="Cryptocurrency Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3>Cryptocurrency Prediction System</h3>
+                        <p>Advanced cryptocurrency price prediction system using machine learning algorithms and real-time market data analysis for accurate trading insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Cryptocurrency</span>
+                            <span class="tech-tag">Trading</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvanithin/Crypto-Currency-Prediction" target="_blank" class="btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Project 2 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                        <div class="project-image">
+                            <img src="media/heart.jpeg" alt="Heart Failure Prediction">
+                        </div>
+                        <div class="project-content">
+                            <h3>Heart Failure Prediction System</h3>
+                            <p>Machine learning-based healthcare solution for early detection of heart failure using patient data and advanced predictive analytics.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Healthcare AI</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Predictive Analytics</span>
+                                <span class="tech-tag">Medical Data</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/Heart-Failure-Prediction-" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 3 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                        <div class="project-image">
+                            <img src="media/spam.png" alt="Spam Detection">
+                        </div>
+                        <div class="project-content">
+                            <h3>Intelligent Spam Mail Detector</h3>
+                            <p>Advanced email classification system using natural language processing and machine learning to accurately detect and filter spam emails.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Classification</span>
+                                <span class="tech-tag">Email Security</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/Spam-Mail-Detection-" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 4 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                        <div class="project-image">
+                            <img src="media/cardio.jpeg" alt="Food Recommendation">
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Food Recommendation System</h3>
+                            <p>Personalized food recommendation engine using collaborative filtering and machine learning to suggest meals based on user preferences and dietary requirements.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Recommendation System</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Flask</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/Movie-Recommendation-Engine" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 5 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="media/mental.png" alt="Brain Tumor Detection">
+                    </div>
+                        <div class="project-content">
+                            <h3>Brain Tumor Detection System</h3>
+                            <p>Deep learning-based medical imaging system for detecting brain tumors from MRI scans using convolutional neural networks and computer vision techniques.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Deep Learning</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Medical AI</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/Brain-Tumor-detection-" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 6 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="media/RL.png" alt="Stock Market Prediction">
+                    </div>
+                        <div class="project-content">
+                            <h3>Stock Market Prediction Engine</h3>
+                            <p>Advanced financial prediction system using time series analysis and machine learning to forecast stock prices and market trends for investment decisions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Time Series</span>
+                                <span class="tech-tag">Financial ML</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Trading</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/Stock-Market-Prediction-" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 7 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="media/linkedin clone.png" alt="E-commerce Platform">
+                    </div>
+                        <div class="project-content">
+                            <h3>Full-Stack E-commerce Platform</h3>
+                            <p>Complete e-commerce solution with React frontend, Node.js backend, payment integration, and real-time inventory management for online retail businesses.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">E-commerce</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/E-commerce" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 8 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="media/blockchain.jpeg" alt="Blockchain Voting">
+                    </div>
+                        <div class="project-content">
+                            <h3>Blockchain Voting System</h3>
+                            <p>Secure and transparent digital voting platform using blockchain technology and smart contracts to ensure election integrity and voter privacy.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Blockchain</span>
+                                <span class="tech-tag">Smart Contracts</span>
+                                <span class="tech-tag">Web3</span>
+                                <span class="tech-tag">Security</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Additional Project 9 -->
+                <div data-aos="fade-up" data-aos-duration="300" data-aos-once="true" class="project-card hidden-project">
+                    <div class="project-image">
+                        <img src="media/chatbot.jpeg" alt="AI Chatbot">
+                    </div>
+                        <div class="project-content">
+                            <h3>Intelligent Customer Service Bot</h3>
+                            <p>AI-powered chatbot using natural language processing and machine learning to provide automated customer support with context-aware responses.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Chatbot</span>
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sarvanithin/AI-chat-bot-" target="_blank" class="btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- View All Projects Button -->
+            <div class="view-all-container">
+                <button id="view-all-btn" class="btn-view-all" onclick="window.toggleAllProjects();">
+                    ⬇️ View All Projects
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="projects">
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Skills</h1>
+            <div class="projectcards">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-code"></i> Programming Languages</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-brain"></i> AI/ML & Deep Learning</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Weights & Biases</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">CNNs</span>
+                        <span class="skill-tag">RNNs/LSTM</span>
+                        <span class="skill-tag">GANs</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Transfer Learning</span>
+                        <span class="skill-tag">Predictive Analytics</span>
+                        <span class="skill-tag">Statistical Modeling</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-cloud"></i> Cloud & DevOps</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Apache Kafka</span>
+                        <span class="skill-tag">ElasticSearch</span>
+                        <span class="skill-tag">GitLab CI/CD</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-database"></i> Data Engineering & Analytics</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Apache Spark</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Neo4j</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">InfluxDB</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-globe"></i> Web & Mobile Development</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Spring Boot</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="950" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-network-wired"></i> Systems & Networking</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Ubuntu</span>
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">macOS</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Virtualization</span>
+                        <span class="skill-tag">VMware</span>
+                        <span class="skill-tag">System Administration</span>
+                        <span class="skill-tag">Shell Scripting</span>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true" class="card shadow-lg">
+                    <h2><i class="fas fa-link"></i> Emerging Technologies</h2><br>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Blockchain</span>
+                        <span class="skill-tag">Ethereum</span>
+                        <span class="skill-tag">Smart Contracts</span>
+                        <span class="skill-tag">Web3</span>
+                        <span class="skill-tag">Edge AI</span>
+                        <span class="skill-tag">IoT</span>
+                        <span class="skill-tag">Quantum Computing</span>
+                        <span class="skill-tag">MLOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="feedback" class="feedback">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Get In Touch</h1>
+        <p class="contact-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+            Let's connect! I'm always open to discussing new opportunities, collaborations, or just having a chat about data science and AI.
+        </p>
+
+        <div class="contact-container">
+            <!-- Contact Cards -->
+            <div class="contact-cards" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:sarvanithin@gmail.com">sarvanithin@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/nithin-sarva/" target="_blank">Connect with me</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/sarvanithin" target="_blank">View my work</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+                <form id="contact-form" action="https://formspree.io/f/xpqaogoy" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="mlinks">
+            <a target="_blank" href="https://github.com/sarvanithin"><i class="fab fa-github-square"></i></a>
+        </div>
+        <p id="copy">&copy;</p>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
