@@ -1,288 +1,331 @@
-// DOM Elements
-const sideNav = document.getElementById('mySidenav');
-const title = document.getElementById('title');
-const themeIcon = document.getElementById('theme-icon');
-
-// Navigation Functions
-const openNav = () => {
-    const toggleBtn = document.querySelector('.toggle-btn');
-    sideNav.style.width = '250px';
-    document.body.style.marginLeft = '250px';
-    document.body.style.transition = 'margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)';
-    if (toggleBtn) {
-        toggleBtn.classList.add('sidebar-open');
+const portfolioData = {
+  topSixFeatured: [
+    {
+      title: "Buildify",
+      description:
+        "Floor plans and building layouts with a HouseGAN++ style backbone, editing in the browser, and simple scoring so you can compare designs without squinting at CAD.",
+      tags: ["React", "TypeScript", "FastAPI", "Applied AI"],
+      code: "https://github.com/sarvanithin/Buildify",
+      demo: "",
+      image: "https://opengraph.githubassets.com/1/sarvanithin/Buildify"
+    },
+    {
+      title: "ARES (Agentic Research & Evaluation Suite)",
+      description:
+        "I contribute to Martian's open ARES work around agentic eval and RL-ish environments. Good place to see how I think about benchmarks, not just demos.",
+      tags: ["Open Source", "Ares", "AI Evaluation", "RL Environment"],
+      code: "https://github.com/withmartian/ares",
+      demo: "",
+      image: "https://opengraph.githubassets.com/1/withmartian/ares"
+    },
+    {
+      title: "EduBuddy",
+      description:
+        "Tutoring app idea: paths that adapt, progress you can see, and quizzes generated so teachers aren't stuck writing every variant by hand.",
+      tags: ["Next.js", "TypeScript", "Azure OpenAI", "EdTech"],
+      code: "https://github.com/sarvanithin/edubuddy",
+      demo: "",
+      image: "https://opengraph.githubassets.com/1/sarvanithin/edubuddy"
+    },
+    {
+      title: "MindScribe",
+      description:
+        "Personal productivity side project: capture context, automate the annoying bits, and keep LLM help grounded in what you were actually doing.",
+      tags: ["AI Product", "LLM Workflow", "Automation"],
+      code: "https://github.com/sarvanithin/MindScribe",
+      demo: "",
+      image: "https://opengraph.githubassets.com/1/sarvanithin/MindScribe"
+    },
+    {
+      title: "MedGuard",
+      description:
+        "Middleware-style guardrails for clinical LLMs: strip or flag PHI, tighten scope, nudge on drug safety, and surface when the model is probably hallucinating.",
+      tags: ["Python", "FastAPI", "LLM Safety", "Healthcare AI"],
+      code: "https://github.com/sarvanithin/Medguard",
+      demo: "",
+      image: "media/medguard-banner.svg"
+    },
+    {
+      title: "ClinicalTrial Match",
+      description:
+        "Match patient notes or FHIR-ish inputs to ClinicalTrials.gov listings with scoring you can read, not a black box ranker.",
+      tags: ["FastAPI", "NLP", "RAG", "Healthcare"],
+      code: "https://github.com/sarvanithin/clinicaltrial-match",
+      demo: "https://clinicaltrial-match.onrender.com",
+      image: "media/clinicaltrial-banner.svg"
     }
+  ],
+  topSixHealthcareAI: [
+    {
+      title: "MedGuard",
+      description:
+        "Middleware-style guardrails for clinical LLMs: strip or flag PHI, tighten scope, nudge on drug safety, and surface when the model is probably hallucinating.",
+      tags: ["Python", "FastAPI", "LLM Safety", "Healthcare AI"],
+      code: "https://github.com/sarvanithin/Medguard",
+      demo: "",
+      image: "media/medguard-banner.svg"
+    },
+    {
+      title: "MedRAG Toolkit",
+      description:
+        "RAG stack tuned for clinical text: citations you can check, hallucination checks baked in, answers that fail closed when evidence is thin.",
+      tags: ["Python", "RAG", "FAISS", "Medical AI"],
+      code: "https://github.com/sarvanithin/medrag-toolkit",
+      demo: "",
+      image: "media/medrag-banner.svg"
+    },
+    {
+      title: "ClinicalTrial Match",
+      description:
+        "Match patient notes or FHIR-ish inputs to ClinicalTrials.gov listings with scoring you can read, not a black box ranker.",
+      tags: ["FastAPI", "NLP", "FHIR", "Healthcare AI"],
+      code: "https://github.com/sarvanithin/clinicaltrial-match",
+      demo: "https://clinicaltrial-match.onrender.com",
+      image: "media/clinicaltrial-banner.svg"
+    },
+    {
+      title: "Clinical De-identify",
+      description:
+        "Dashboard for de-ID: BioClinicalBERT plus regex for HIPAA-style PHI across notes, PDFs, and Word docs when you need something you can demo, not a one-off script.",
+      tags: ["Python", "BioClinicalBERT", "HIPAA", "Healthcare NLP"],
+      code: "https://github.com/sarvanithin/clinical-deidentify",
+      demo: "",
+      image: "media/clinical-deidentify-banner.svg"
+    },
+    {
+      title: "MIMIC DataLoader (PyTorch)",
+      description:
+        "PyTorch datasets for MIMIC-IV style tasks (mortality, readmission, LOS, sepsis, phenotyping, decompensation) so you spend time on models, not CSV wrangling.",
+      tags: ["PyTorch", "MIMIC-IV", "Clinical ML", "Healthcare AI"],
+      code: "https://github.com/sarvanithin/mimic-dataloader",
+      demo: "",
+      image: "media/mimic-dataloader-banner.svg"
+    },
+    {
+      title: "AI-Powered Mental Health Prediction",
+      description:
+        "Earlier healthcare ML project: predictive signals from text and structured data, aimed at decision support rather than a flashy demo only.",
+      tags: ["Machine Learning", "Healthcare", "NLP"],
+      code: "https://github.com/sarvanithin/Mental_health_detection",
+      demo: "",
+      image: "media/mental-health-banner.svg"
+    }
+  ],
+  contributions: [
+    {
+      category: "Open source",
+      title: "ARES (Agentic Research & Evaluation Suite)",
+      detail:
+        "I ship changes and experiments around Martian's ARES (agentic eval, RL-flavored environments). I also keep a fork around for ideas that aren't ready for upstream yet.",
+      proof: [
+        { label: "Upstream repo", href: "https://github.com/withmartian/ares" },
+        { label: "Pull requests", href: "https://github.com/withmartian/ares/pulls?q=is%3Apr+author%3Asarvanithin" },
+        { label: "My commits", href: "https://github.com/withmartian/ares/commits?author=sarvanithin" },
+        { label: "My fork", href: "https://github.com/sarvanithin/ares" }
+      ]
+    },
+    {
+      category: "PyPI-ready OSS",
+      title: "MIMIC DataLoader (PyTorch)",
+      detail:
+        "mimic-dataloader is the package I put out for MIMIC-IV style prediction tasks. Think mortality, readmission, LOS, sepsis, and friends, ready for PyTorch training loops.",
+      proof: [
+        { label: "Repo", href: "https://github.com/sarvanithin/mimic-dataloader" },
+        { label: "Commits", href: "https://github.com/sarvanithin/mimic-dataloader/commits?author=sarvanithin" }
+      ]
+    },
+    {
+      category: "Shipped products",
+      title: "Healthcare AI stack (repos)",
+      detail:
+        "MedGuard, MedRAG Toolkit, ClinicalTrial Match, Clinical De-identify: all stuff you can clone and read. If it's listed here, I'm fine with you judging the code.",
+      proof: [
+        { label: "MedGuard", href: "https://github.com/sarvanithin/Medguard" },
+        { label: "MedRAG Toolkit", href: "https://github.com/sarvanithin/medrag-toolkit" },
+        { label: "ClinicalTrial Match", href: "https://github.com/sarvanithin/clinicaltrial-match" },
+        { label: "Clinical De-identify", href: "https://github.com/sarvanithin/clinical-deidentify" }
+      ]
+    },
+    {
+      category: "Portfolio",
+      title: "10+ AI products & apps",
+      detail:
+        "Healthcare, planning tools, chatty assistants, analytics: a pile of repos on one GitHub profile. Some are polished, some are messy labs, all of them public.",
+      proof: [{ label: "All repos", href: "https://github.com/sarvanithin?tab=repositories" }]
+    },
+    {
+      category: "Public writing",
+      title: "Research & build updates (LinkedIn)",
+      detail:
+        "I post on LinkedIn when something interesting ships: DOE vehicle trends work, global mental health systems, random open source drops. Easier than a blog I never update.",
+      proof: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/nithin-sarva/" }]
+    }
+  ]
+};
+
+function openGraphImageFromRepo(repoUrl) {
+  const m = String(repoUrl).match(/github\.com\/([^/]+)\/([^/?#]+)/);
+  if (!m) return "";
+  return `https://opengraph.githubassets.com/1/${m[1]}/${m[2]}`;
 }
 
-const closeNav = () => {
-    const toggleBtn = document.querySelector('.toggle-btn');
-    sideNav.style.width = '0';
-    document.body.style.marginLeft = '0';
-    document.body.style.transition = 'margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)';
-    if (toggleBtn) {
-        toggleBtn.classList.remove('sidebar-open');
-    }
-}
+function renderProjects(list) {
+  const grid = document.getElementById("projects-grid");
+  if (!grid) return;
 
-// Theme Toggle Function
-const toggleTheme = () => {
-    const body = document.body;
-    const currentTheme = body.getAttribute('data-theme') || 'dark';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Update theme icon
-    const themeIcon = document.getElementById('theme-icon');
-    if (themeIcon) {
-        if (newTheme === 'dark') {
-            themeIcon.className = 'fas fa-sun';
-        } else {
-            themeIcon.className = 'fas fa-moon';
-        }
-    }
-    
-    console.log('Theme switched to:', newTheme); // Debug log
-}
+  grid.innerHTML = list
+    .map((project) => {
+      const ogFallback = openGraphImageFromRepo(project.code);
+      const src = escapeHtml(project.image);
+      const alt = escapeHtml(`${project.title} preview`);
+      const ogEsc = ogFallback ? escapeHtml(ogFallback) : "";
+      return `
+    <article class="card project-card">
+      <div class="project-image-wrap">
+        <img src="${src}" alt="${alt}" loading="lazy" decoding="async" data-og-fallback="${ogEsc}">
+      </div>
+      <h3>${escapeHtml(project.title)}</h3>
+      <p>${escapeHtml(project.description)}</p>
+      <div class="tags">${project.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
+      <div class="project-links">
+        <a href="${escapeHtml(project.code)}" target="_blank" rel="noopener noreferrer">Repo</a>
+        ${project.demo ? `<a href="${escapeHtml(project.demo)}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}
+      </div>
+    </article>
+  `;
+    })
+    .join("");
 
-// Initialize theme on page load
-const initTheme = () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.body.setAttribute('data-theme', savedTheme);
-    
-    const themeIcon = document.getElementById('theme-icon');
-    if (themeIcon) {
-        if (savedTheme === 'dark') {
-            themeIcon.className = 'fas fa-sun';
-        } else {
-            themeIcon.className = 'fas fa-moon';
-        }
-    }
-    
-    console.log('Theme initialized to:', savedTheme); // Debug log
-}
-
-// Smooth scrolling for navigation links
-const smoothScroll = (target) => {
-    const element = document.querySelector(target);
-    if (element) {
-        element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-}
-
-// Typing animation for hero subtitle
-const typeWriter = (element, text, speed = 100) => {
-    let i = 0;
-    element.innerHTML = '';
-
-    const type = () => {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    };
-
-    type();
-}
-
-// Typing effect for rotating roles
-const typedTextSpan = document.querySelector('.typed-text');
-const cursorSpan = document.querySelector('.cursor');
-
-const textArray = ['AI Engineer', 'Data Scientist','Data Analyst', 'Machine Learning Engineer', 'Data Engineer','Data Visualization Specialist','Data Architecture Specialist','Data Science Consultant' ,
-    'llm engineer','AI Researcher','AI Architect','AI Consultant','AI Strategist'
-];
-const typingDelay = 100;
-const erasingDelay = 50;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-        if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-    } else {
-        cursorSpan.classList.remove('typing');
-        setTimeout(erase, newTextDelay);
-    }
-}
-
-function erase() {
-    if (charIndex > 0) {
-        if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-    } else {
-        cursorSpan.classList.remove('typing');
-        textArrayIndex++;
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, typingDelay + 500);
-    }
-}
-
-// Initialize animations and theme on page load
-document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
-
-    // Start typing animation
-    if (typedTextSpan && cursorSpan) {
-        setTimeout(type, newTextDelay + 250);
-    }
-
-    // Scroll to top on page load to show hero section
-    window.scrollTo(0, 0);
-    
-    // Add intersection observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.card, .about img, .about p');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        el.style.willChange = 'opacity, transform'; // GPU acceleration hint
-        observer.observe(el);
-    });
-
-    // Remove will-change after animations complete to free resources
-    animatedElements.forEach(el => {
-        el.addEventListener('transitionend', function removeWillChange() {
-            el.style.willChange = 'auto';
-            el.removeEventListener('transitionend', removeWillChange);
-        }, { once: true });
-    });
-});
-
-// Parallax effect for hero background (optimized with requestAnimationFrame)
-let ticking = false;
-let lastScrollY = 0;
-
-window.addEventListener('scroll', () => {
-    lastScrollY = window.pageYOffset;
-
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const parallax = document.querySelector('.hero');
-            if (parallax) {
-                // Only apply parallax when near the hero section for better performance
-                if (lastScrollY < window.innerHeight * 1.5) {
-                    const speed = lastScrollY * 0.5;
-                    parallax.style.transform = `translateY(${speed}px)`;
-                }
-            }
-            ticking = false;
-        });
-        ticking = true;
-    }
-}, { passive: true });
-
-// Contact Form Handling
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    if (form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('.submit-btn');
-            const originalBtnText = submitBtn.innerHTML;
-
-            // Disable button and show loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-            try {
-                // Using Formspree (you'll need to replace with your actual form ID)
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    formStatus.className = 'success';
-                    formStatus.textContent = 'Thanks for your message! I\'ll get back to you soon.';
-                    form.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                formStatus.className = 'error';
-                formStatus.textContent = 'Oops! Something went wrong. Please try emailing me directly.';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
-
-                // Hide status message after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
-            }
-        });
-    }
-});
-
-// Toggle All Projects functionality
-window.toggleAllProjects = function() {
-    const hiddenProjects = document.querySelectorAll('.hidden-project');
-    const viewAllBtn = document.getElementById('view-all-btn');
-
-    if (!viewAllBtn || hiddenProjects.length === 0) {
-        console.error('Elements not found');
+  grid.querySelectorAll(".project-image-wrap img").forEach((img) => {
+    img.addEventListener("error", function onImgErr() {
+      const fb = this.getAttribute("data-og-fallback");
+      if (!fb || this.dataset.fallbackApplied === "1") {
+        this.removeEventListener("error", onImgErr);
         return;
-    }
-
-    // Check if projects are currently hidden (check computed style)
-    const isHidden = window.getComputedStyle(hiddenProjects[0]).display === 'none';
-
-    if (isHidden) {
-        // Show all hidden projects
-        hiddenProjects.forEach(project => {
-            project.style.display = 'flex';
-        });
-        viewAllBtn.innerHTML = '⬆️ Show Less Projects';
-
-        // Scroll to first additional project
-        setTimeout(() => {
-            hiddenProjects[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 200);
-    } else {
-        // Hide all additional projects
-        hiddenProjects.forEach(project => {
-            project.style.display = 'none';
-        });
-        viewAllBtn.innerHTML = '⬇️ View All Projects';
-
-        // Scroll back to button
-        setTimeout(() => {
-            viewAllBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 200);
-    }
+      }
+      this.dataset.fallbackApplied = "1";
+      this.src = fb;
+    });
+  });
 }
 
+function setProjectFilter(filter) {
+  const featuredBtn = document.getElementById("filter-featured");
+  const healthcareBtn = document.getElementById("filter-healthcare");
+
+  if (filter === "healthcare") {
+    renderProjects(portfolioData.topSixHealthcareAI);
+    featuredBtn?.classList.remove("active");
+    healthcareBtn?.classList.add("active");
+  } else {
+    renderProjects(portfolioData.topSixFeatured);
+    featuredBtn?.classList.add("active");
+    healthcareBtn?.classList.remove("active");
+  }
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function renderContributions() {
+  const container = document.getElementById("contributions-list");
+  if (!container) return;
+
+  container.innerHTML = portfolioData.contributions
+    .map((item) => {
+      const proof =
+        item.proof && item.proof.length
+          ? `<div class="contrib-proof" role="group" aria-label="Links to verify this item">
+          <span class="contrib-proof-label">Links</span>
+          <div class="contrib-proof-links">
+            ${item.proof
+              .map(
+                (p) =>
+                  `<a class="proof-link" href="${escapeHtml(p.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.label)}</a>`
+              )
+              .join("")}
+          </div>
+        </div>`
+          : "";
+
+      return `
+    <article class="contrib-card">
+      <div class="contrib-card-top">
+        <span class="contrib-category">${escapeHtml(item.category)}</span>
+      </div>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p class="contrib-detail">${escapeHtml(item.detail)}</p>
+      ${proof}
+    </article>`;
+    })
+    .join("");
+}
+
+function setupThemeToggle() {
+  const button = document.getElementById("theme-toggle");
+  const body = document.body;
+  const saved = localStorage.getItem("portfolio-theme") || "dark";
+  body.setAttribute("data-theme", saved);
+  if (button) button.textContent = saved === "dark" ? "🌙" : "☀️";
+
+  button?.addEventListener("click", () => {
+    const current = body.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    body.setAttribute("data-theme", next);
+    localStorage.setItem("portfolio-theme", next);
+    button.textContent = next === "dark" ? "🌙" : "☀️";
+  });
+}
+
+function setupMenuToggle() {
+  const menuButton = document.getElementById("menu-toggle");
+  const nav = document.getElementById("main-nav");
+  menuButton?.addEventListener("click", () => nav?.classList.toggle("open"));
+
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => nav.classList.remove("open"));
+  });
+}
+
+function setupProjectFilters() {
+  const featuredBtn = document.getElementById("filter-featured");
+  const healthcareBtn = document.getElementById("filter-healthcare");
+
+  featuredBtn?.addEventListener("click", () => setProjectFilter("featured"));
+  healthcareBtn?.addEventListener("click", () => setProjectFilter("healthcare"));
+}
+
+function setupExperienceSlider() {
+  const slider = document.getElementById("experience-slider");
+  const prev = document.getElementById("exp-prev");
+  const next = document.getElementById("exp-next");
+  if (!slider || !prev || !next) return;
+
+  const step = 360;
+  prev.addEventListener("click", () => {
+    slider.scrollBy({ left: -step, behavior: "smooth" });
+  });
+  next.addEventListener("click", () => {
+    slider.scrollBy({ left: step, behavior: "smooth" });
+  });
+}
+
+function setDynamicDates() {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setProjectFilter("featured");
+  renderContributions();
+  setupThemeToggle();
+  setupMenuToggle();
+  setupProjectFilters();
+  setupExperienceSlider();
+  setDynamicDates();
+});

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Mental Health Prediction project banner">
+  <defs>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d0f3f"/>
+      <stop offset="100%" stop-color="#4e2aa3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g6)"/>
+  <path d="M0,520 C220,470 390,620 610,560 C820,500 1000,560 1200,510 L1200,675 L0,675 Z" fill="#bf9bff" opacity="0.17"/>
+  <text x="84" y="260" fill="#f2eaff" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">Mental Health Prediction</text>
+  <text x="84" y="330" fill="#d9beff" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="600">AI Screening & Decision Support</text>
+  <text x="84" y="390" fill="#ebdaff" font-family="Inter, Arial, sans-serif" font-size="25">Machine Learning " NLP " Healthcare Analytics</text>
+</svg>

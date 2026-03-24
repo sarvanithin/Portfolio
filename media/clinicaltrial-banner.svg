@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="ClinicalTrial Match project banner">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06372f"/>
+      <stop offset="100%" stop-color="#0d5e50"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g3)"/>
+  <path d="M0,520 C220,420 420,640 650,540 C860,450 980,520 1200,430 L1200,675 L0,675 Z" fill="#5ef0cf" opacity="0.16"/>
+  <text x="82" y="275" fill="#e8fff8" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">ClinicalTrial Match</text>
+  <text x="82" y="345" fill="#b8f9e7" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600">Privacy-first Trial Matching Platform</text>
+  <text x="82" y="405" fill="#dcfff5" font-family="Inter, Arial, sans-serif" font-size="26">FHIR + NLP + FastAPI</text>
+</svg>

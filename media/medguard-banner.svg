@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="MedGuard project banner">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1f3a"/>
+      <stop offset="100%" stop-color="#123f75"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g1)"/>
+  <circle cx="180" cy="120" r="90" fill="#1ec8ff" opacity="0.2"/>
+  <circle cx="1040" cy="560" r="140" fill="#6a8dff" opacity="0.18"/>
+  <text x="80" y="280" fill="#e8f4ff" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">MedGuard</text>
+  <text x="80" y="350" fill="#9edbff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600">Healthcare LLM Guardrails</text>
+  <text x="80" y="410" fill="#d7ecff" font-family="Inter, Arial, sans-serif" font-size="26">PHI Redaction " Drug Safety " Hallucination Checks</text>
+</svg>
