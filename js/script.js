@@ -269,12 +269,12 @@ function renderContributions() {
 function setupThemeToggle() {
   const button = document.getElementById("theme-toggle");
   const body = document.body;
-  const saved = localStorage.getItem("portfolio-theme") || "dark";
+  const saved = localStorage.getItem("portfolio-theme") || "light";
   body.setAttribute("data-theme", saved);
   if (button) button.textContent = saved === "dark" ? "🌙" : "☀️";
 
   button?.addEventListener("click", () => {
-    const current = body.getAttribute("data-theme") || "dark";
+    const current = body.getAttribute("data-theme") || "light";
     const next = current === "dark" ? "light" : "dark";
     body.setAttribute("data-theme", next);
     localStorage.setItem("portfolio-theme", next);
