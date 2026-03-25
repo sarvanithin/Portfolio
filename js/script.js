@@ -39,20 +39,20 @@ const portfolioData = {
     {
       title: "MedGuard",
       description:
-        "Middleware-style guardrails for clinical LLMs: strip or flag PHI, tighten scope, nudge on drug safety, and surface when the model is probably hallucinating.",
-      tags: ["Python", "FastAPI", "LLM Safety", "Healthcare AI"],
+        "LLM guardrails middleware: sensitive-field handling, scope control, safety checks, and surfacing when the model is probably wrong. Useful anywhere trust matters, including regulated settings.",
+      tags: ["Python", "FastAPI", "LLM Safety", "OSS"],
       code: "https://github.com/sarvanithin/Medguard",
       demo: "",
       image: "media/medguard-banner.svg"
     },
     {
-      title: "ClinicalTrial Match",
+      title: "MedRAG Toolkit",
       description:
-        "Match patient notes or FHIR-ish inputs to ClinicalTrials.gov listings with scoring you can read, not a black box ranker.",
-      tags: ["FastAPI", "NLP", "RAG", "Healthcare"],
-      code: "https://github.com/sarvanithin/clinicaltrial-match",
-      demo: "https://clinicaltrial-match.onrender.com",
-      image: "media/clinicaltrial-banner.svg"
+        "RAG toolkit built for messy, citation-heavy question answering: grounding, hallucination checks, and conservative behavior when evidence is thin. Strong fit for docs and knowledge bases, not only clinical text.",
+      tags: ["Python", "RAG", "FAISS", "OSS"],
+      code: "https://github.com/sarvanithin/medrag-toolkit",
+      demo: "",
+      image: "media/medrag-banner.svg"
     }
   ],
   topSixHealthcareAI: [
@@ -116,7 +116,7 @@ const portfolioData = {
       category: "Open source",
       title: "ARES (Agentic Research & Evaluation Suite)",
       detail:
-        "I ship changes and experiments around Martian's ARES (agentic eval, RL-flavored environments). I also keep a fork around for ideas that aren't ready for upstream yet.",
+        "Contributions and experiments on Martian's ARES: agentic evaluation, RL-style environments, and benchmarks that stress-test systems instead of cherry-picking demos.",
       proof: [
         { label: "Upstream repo", href: "https://github.com/withmartian/ares" },
         { label: "Pull requests", href: "https://github.com/withmartian/ares/pulls?q=is%3Apr+author%3Asarvanithin" },
@@ -125,39 +125,39 @@ const portfolioData = {
       ]
     },
     {
-      category: "PyPI-ready OSS",
-      title: "MIMIC DataLoader (PyTorch)",
+      category: "Portfolio",
+      title: "10+ public AI repos",
       detail:
-        "mimic-dataloader is the package I put out for MIMIC-IV style prediction tasks. Think mortality, readmission, LOS, sepsis, and friends, ready for PyTorch training loops.",
+        "Agents, planning tools, education apps, analytics, guardrails, and RAG stacks — all on one GitHub. Some are portfolio-grade, some are labs, everything is inspectable.",
+      proof: [{ label: "All repos", href: "https://github.com/sarvanithin?tab=repositories" }]
+    },
+    {
+      category: "Shipped products",
+      title: "LLM tools & RAG (OSS)",
+      detail:
+        "MedGuard, MedRAG, ClinicalTrial Match, Clinical De-identify: example product repos spanning LLM safety, retrieval, matching, and de-ID pipelines — clone and read the implementation.",
+      proof: [
+        { label: "MedGuard", href: "https://github.com/sarvanithin/Medguard" },
+        { label: "MedRAG", href: "https://github.com/sarvanithin/medrag-toolkit" },
+        { label: "ClinicalTrial Match", href: "https://github.com/sarvanithin/clinicaltrial-match" },
+        { label: "Clinical De-identify", href: "https://github.com/sarvanithin/clinical-deidentify" }
+      ]
+    },
+    {
+      category: "PyTorch OSS",
+      title: "MIMIC DataLoader",
+      detail:
+        "PyTorch-ready datasets for structured clinical prediction tasks — useful pattern for tabular + sequence modeling and for anyone working with MIMIC-style benchmarks.",
       proof: [
         { label: "Repo", href: "https://github.com/sarvanithin/mimic-dataloader" },
         { label: "Commits", href: "https://github.com/sarvanithin/mimic-dataloader/commits?author=sarvanithin" }
       ]
     },
     {
-      category: "Shipped products",
-      title: "Healthcare AI stack (repos)",
-      detail:
-        "MedGuard, MedRAG Toolkit, ClinicalTrial Match, Clinical De-identify: all stuff you can clone and read. If it's listed here, I'm fine with you judging the code.",
-      proof: [
-        { label: "MedGuard", href: "https://github.com/sarvanithin/Medguard" },
-        { label: "MedRAG Toolkit", href: "https://github.com/sarvanithin/medrag-toolkit" },
-        { label: "ClinicalTrial Match", href: "https://github.com/sarvanithin/clinicaltrial-match" },
-        { label: "Clinical De-identify", href: "https://github.com/sarvanithin/clinical-deidentify" }
-      ]
-    },
-    {
-      category: "Portfolio",
-      title: "10+ AI products & apps",
-      detail:
-        "Healthcare, planning tools, chatty assistants, analytics: a pile of repos on one GitHub profile. Some are polished, some are messy labs, all of them public.",
-      proof: [{ label: "All repos", href: "https://github.com/sarvanithin?tab=repositories" }]
-    },
-    {
       category: "Public writing",
-      title: "Research & build updates (LinkedIn)",
+      title: "Build notes (LinkedIn)",
       detail:
-        "I post on LinkedIn when something interesting ships: DOE vehicle trends work, global mental health systems, random open source drops. Easier than a blog I never update.",
+        "Short posts when something ships: public dashboards, research-adjacent AI, open source drops, policy-relevant eval work — faster for me than a long-running blog.",
       proof: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/nithin-sarva/" }]
     }
   ]
