@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HSEW8ZZHM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -136,19 +136,6 @@
                 </article>
                 <article class="experience-card experience-card--highlight">
                     <div class="experience-top">
-                        <span class="experience-badge">Research</span>
-                        <span class="experience-time">Feb 2025 to Jan 2026</span>
-                    </div>
-                    <h3>Data Scientist</h3>
-                    <h4>Center for Global Mental Health Equity (GWU School of Medicine)</h4>
-                    <p class="experience-meta">Washington, D.C.</p>
-                    <p>
-                        Owned modeling and analytics for multi-partner programs (including WHO/UNICEF-linked initiatives): metrics and study design support,
-                        ML and reporting pipelines, data quality, and turning messy operational data into decisions stakeholders trust.
-                    </p>
-                </article>
-                <article class="experience-card">
-                    <div class="experience-top">
                         <span class="experience-badge">Academic</span>
                         <span class="experience-time">Sep 2025 to Jan 2026</span>
                     </div>
@@ -156,16 +143,6 @@
                     <h4>GW School of Engineering & Applied Science</h4>
                     <p class="experience-meta">Washington, D.C. · Hybrid</p>
                     <p>Dashboards and analytics for DOE-funded vehicle and EV adoption research (the kind of work that ended up on VehicleTrends-style public views).</p>
-                </article>
-                <article class="experience-card">
-                    <div class="experience-top">
-                        <span class="experience-badge">Consulting</span>
-                        <span class="experience-time">Feb 2025 to Jun 2025</span>
-                    </div>
-                    <h3>Data Scientist Consultant</h3>
-                    <h4>Data Science for Sustainable Development</h4>
-                    <p class="experience-meta">Washington, D.C. · Hybrid</p>
-                    <p>Built data science and small software pieces for sustainability analytics so teams could report faster and argue from cleaner numbers.</p>
                 </article>
             </div>
 
@@ -178,6 +155,26 @@
             </div>
 
             <div id="experience-slider" class="experience-slider">
+                <article class="experience-card">
+                    <div class="experience-top">
+                        <span class="experience-badge">Research</span>
+                        <span class="experience-time">Feb 2025 to Jan 2026</span>
+                    </div>
+                    <h3>Data Scientist</h3>
+                    <h4>Center for Global Mental Health Equity (GWU School of Medicine)</h4>
+                    <p class="experience-meta">Washington, D.C.</p>
+                    <p>Owned modeling and analytics for multi-partner programs (including WHO/UNICEF-linked initiatives): metrics and study design support, ML and reporting pipelines, data quality, and turning messy operational data into decisions stakeholders trust.</p>
+                </article>
+                <article class="experience-card">
+                    <div class="experience-top">
+                        <span class="experience-badge">Consulting</span>
+                        <span class="experience-time">Feb 2025 to Jun 2025</span>
+                    </div>
+                    <h3>Data Scientist Consultant</h3>
+                    <h4>Data Science for Sustainable Development</h4>
+                    <p class="experience-meta">Washington, D.C. · Hybrid</p>
+                    <p>Built data science and small software pieces for sustainability analytics so teams could report faster and argue from cleaner numbers.</p>
+                </article>
                 <article class="experience-card">
                     <div class="experience-top">
                         <span class="experience-badge">Industry</span>
@@ -242,15 +239,21 @@
         </section>
 
         <section id="projects" class="section">
-            <div class="section-head">
-                <h2>Featured projects</h2>
-                <p>Default mix spans agents, products, and OSS. Second tab deep-dives healthcare &amp; regulated-AI repos.</p>
+            <div class="section-head section-head--projects">
+                <div class="eyebrow"><span class="eyebrow-dot"></span>03 · projects</div>
+                <h2 class="proj-h1">Things I've actually <em>shipped</em>.</h2>
+                <p class="lede">A mix of agentic AI products, public data work, and healthcare tooling — each one deployed and reachable at the link, not a screenshot of a Figma. Domains shift; the through-line is reliable AI systems and honest data.</p>
+                <div id="proj-filter-row" class="filter-row" role="tablist" aria-label="Project filters"></div>
             </div>
-            <div class="project-filters" role="tablist" aria-label="Project views">
-                <button id="filter-featured" class="filter-btn active" type="button">Top 6 (general)</button>
-                <button id="filter-healthcare" class="filter-btn" type="button">Healthcare &amp; regulated AI</button>
-            </div>
-            <div id="projects-grid" class="grid projects-grid"></div>
+            <div id="featured-project"></div>
+            <div id="projects-grid" class="proj-grid"></div>
+            <p class="proj-more">
+                More experiments and OSS on
+                <a href="https://github.com/sarvanithin?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+            </p>
         </section>
 
         <section id="contributions" class="section contributions-band" aria-labelledby="contributions-heading">
