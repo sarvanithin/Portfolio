@@ -7,7 +7,7 @@ const PROJECTS = [
     category: "AI · Product",
     tags: ["ai", "agents", "product"],
     description:
-      "A planning surface where you describe a product and ArchitectAI returns a concrete system architecture — services, data flows, trade-offs — instead of a vague diagram. Built around a planner agent that grounds suggestions in component libraries and known patterns, not vibes.",
+      "A planning surface where you describe a product and ArchitectAI returns a concrete system architecture (services, data flows, trade-offs) instead of a vague diagram. Built around a planner agent that grounds suggestions in component libraries and known patterns, not vibes.",
     short: "Describe a product → get a real architecture, not a vibe diagram.",
     stack: ["Next.js", "TypeScript", "OpenAI", "LangGraph", "Vercel"],
     url: "https://tryarchitectai.vercel.app/",
@@ -22,10 +22,10 @@ const PROJECTS = [
     category: "Data · Public",
     tags: ["data", "product"],
     description:
-      "A public dashboard for EV adoption and vehicle market dynamics — built with GW R&D and DOE-funded research. Cleans messy registration and sales data into views that survive scrutiny from policy folks.",
-    short: "Public EV dashboards from DOE-funded research at GW.",
-    stack: ["Python", "Django", "Postgres", "D3", "AWS"],
-    url: "https://vehicletrends.us/about",
+      "Open-source, DOE-funded data product I built and shipped in Dr. John Helveston's Technology Change Lab: 169M+ new and used vehicle listings (2018–2025) distilled into trends in miles traveled by powertrain, depreciation, dealer inventory, and market concentration. Ships with the companion {vehicletrends} R package. Featured by GW Engineering at the 2026 R&D Showcase.",
+    short: "169M+ vehicle listings → open EV-market dashboard for policymakers. DOE-funded.",
+    stack: ["R", "Quarto", "Arrow", "R package", "GitHub Pages"],
+    url: "https://vehicletrends.us",
     status: "live",
     featured: false
   },
@@ -47,14 +47,14 @@ const PROJECTS = [
   {
     id: "cgmhe",
     num: "04",
-    title: "CGMHE Eval Tool",
-    tagline: "Multimodal AI scoring for global mental health",
-    category: "Research · Eval",
-    tags: ["ai", "research", "healthcare"],
+    title: "Mental Health AI Eval",
+    tagline: "Evaluation framework for mental health AI · OpenAI grant",
+    category: "Healthcare · Eval",
+    tags: ["ai", "eval", "healthcare"],
     description:
-      "Scoring stack for the EQUIP × OpenAI × WHO-UNICEF pilot: Whisper transcription, GPT-4o evidence extraction, deterministic Python rubrics. Bias controls and nonverbal handling are in v1, not bolted on later.",
-    short: "Whisper + GPT-4o + deterministic rubrics; built for WHO-UNICEF pilot.",
-    stack: ["Python", "Whisper", "GPT-4o", "FastAPI", "Docker"],
+      "Evaluation framework for mental health AI, funded by OpenAI's AI and Mental Health Grant Program. Uses ChatGPT to generate and rate helper responses against WHO–UNICEF EQUIP competencies across six languages, in text and audio, then measures how well ChatGPT and fine-tuned models agree with trained human raters, so AI can help assess both AI and human helpers.",
+    short: "Scores mental health AI on WHO–UNICEF standards in 6 languages; AI raters vs. humans.",
+    stack: ["Python", "Whisper", "OpenAI API", "Fine-tuning", "FastAPI"],
     url: "https://cgmhe-tool.duckdns.org/",
     status: "live",
     featured: false
@@ -67,7 +67,7 @@ const PROJECTS = [
     category: "AI · Product",
     tags: ["ai", "product"],
     description:
-      "Ingests claim packets, extracts the structured fields adjusters actually open, and flags suspicious patterns against a learned baseline. Designed to keep the human in the loop — every flag is explainable.",
+      "Ingests claim packets, extracts the structured fields adjusters actually open, and flags suspicious patterns against a learned baseline. Designed to keep the human in the loop: every flag is explainable.",
     short: "Claim packet → structured fields + explainable suspicious flags.",
     stack: ["Next.js", "FastAPI", "OpenAI", "Postgres"],
     url: "https://claimpilot-jk2k.onrender.com/",
@@ -82,22 +82,157 @@ const PROJECTS = [
     category: "Healthcare · LLM",
     tags: ["ai", "healthcare"],
     description:
-      "Matches a patient profile against ClinicalTrials.gov criteria with an LLM eligibility reasoner — but the reasoner shows its work: which inclusion/exclusion criteria fired, which need clinician review.",
+      "Matches a patient profile against ClinicalTrials.gov criteria with an LLM eligibility reasoner that shows its work: which inclusion/exclusion criteria fired, which need clinician review.",
     short: "LLM matches patients to trials and shows which criteria fired.",
     stack: ["Python", "FastAPI", "OpenAI", "pgvector", "React"],
     url: "https://clinicaltrial-match.onrender.com/",
     status: "live",
     featured: false
+  },
+  {
+    id: "chunkkv",
+    title: "ChunkKV",
+    tagline: "Non-prefix KV-cache reuse for RAG & agents",
+    category: "LLM infra",
+    tags: ["ai", "infra", "eval"],
+    description:
+      "Reuses KV cache for retrieved chunks even when they don't share a prefix: CacheBlend-style selective recompute, re-RoPE, provenance-keyed storage, and a reuse gate that escalates when deviation is too high. On Qwen2.5-7B, RAG time-to-first-token drops ~2x while accuracy holds at 95.7% with 30% recompute. Also found and documented why LMCache's blend path breaks on vLLM 0.32.",
+    short: "~2x faster RAG time-to-first-token on Qwen2.5-7B, 95.7% accuracy kept.",
+    stack: ["Python", "PyTorch", "MLX", "CUDA", "Transformers"],
+    url: "https://github.com/sarvanithin/chunkkv",
+    status: "oss",
+    featured: false
+  },
+  {
+    id: "typestub",
+    title: "TypeStub",
+    tagline: "Typed interfaces for MCP tool outputs",
+    category: "Agents · Dev tools",
+    tags: ["ai", "infra"],
+    description:
+      "Records real MCP tool responses, infers schemas, and generates TypeScript/Python stubs so code-mode agents stop guessing at output shapes. 99.4% field accuracy on the mock server; 40-task benchmark across Claude models with a token budget for stubs. CI-tested monorepo, MIT licensed.",
+    short: "Record MCP outputs → infer schemas → typed stubs for code-mode agents.",
+    stack: ["TypeScript", "MCP", "Python", "Claude"],
+    url: "https://github.com/sarvanithin/typestub",
+    status: "oss",
+    featured: false
+  },
+  {
+    id: "cab",
+    title: "ClinicalAgent-Bench",
+    tagline: "Evaluation suite for healthcare AI agents",
+    category: "Healthcare · Eval",
+    tags: ["ai", "healthcare", "eval"],
+    description:
+      "400 agentic scenarios across 12 operational domains (billing, triage, prior auth, documentation, care navigation) with refusal scored as a first-class F1 metric and 15 demographic-equity scenarios. Built to cover the operations work that MedAgentBench and HealthBench leave out.",
+    short: "400 agentic scenarios, 12 domains, refusal F1 + bias checks.",
+    stack: ["Python", "Pydantic", "LLM-as-judge", "pytest"],
+    url: "https://github.com/sarvanithin/clinicalagent-bench",
+    status: "oss",
+    featured: false
+  },
+  {
+    id: "pharmaos",
+    title: "pharma-os",
+    tagline: "Agentic workflows for pharma R&D documents",
+    category: "AI · Product",
+    tags: ["ai", "healthcare", "product"],
+    description:
+      "Multilingual ingestion (English, Chinese, French) of CSRs, INDs, and patents into structured fields with per-field verbatim source quotes; a cited RAG data room; replayable agent runs with human-approval pause/resume; and a hash-chained audit log. Multi-tenant with row-level security on every table.",
+    short: "Multilingual R&D docs → cited answers, agent runs, tamper-evident audit.",
+    stack: ["Next.js", "Supabase", "Claude", "Voyage", "Inngest"],
+    url: "https://pharma-os-gilt.vercel.app",
+    status: "live",
+    featured: false
+  },
+  {
+    id: "medrag",
+    title: "MedRAG Toolkit",
+    tagline: "Production medical RAG with enforced citations",
+    category: "Healthcare · LLM",
+    tags: ["ai", "healthcare"],
+    description:
+      "Hybrid BM25 + FAISS retrieval fused with RRF over PubMed and OpenFDA/RxNorm, mandatory [PMID]/[Drug] citations, and a hallucination detector that rejects unsupported claims. Ships as a FastAPI service, CLI, and Docker image.",
+    short: "Hybrid retrieval + mandatory PMID citations + hallucination checks.",
+    stack: ["Python", "FAISS", "BM25", "FastAPI", "Docker"],
+    url: "https://github.com/sarvanithin/medrag-toolkit",
+    status: "oss",
+    featured: false
+  },
+  {
+    id: "openrole",
+    title: "OpenRole Intelligence",
+    tagline: "Verified U.S. jobs with explainable H-1B evidence",
+    category: "Data · Public",
+    tags: ["data", "product"],
+    description:
+      "Pulls openings straight from employer career sites, keeps only fresh U.S. roles, and grades sponsorship from the posting's own words: Tier A only for an explicit offer, and a current denial overrides employer history. Every result shows its source and evidence.",
+    short: "Employer-sourced U.S. jobs with sponsorship evidence you can inspect.",
+    stack: ["Python", "FastAPI", "Postgres", "Vercel"],
+    url: "https://openrole-intelligence.vercel.app",
+    status: "live",
+    featured: false
+  },
+  {
+    id: "mindscribe",
+    title: "MindScribe",
+    tagline: "Conversational screening + clinical notes",
+    category: "Healthcare · LLM",
+    tags: ["ai", "healthcare", "product"],
+    description:
+      "Runs PHQ-9 and GAD-7 as an adaptive conversation, maps free-text answers to item scores, and always flags any positive suicidal-ideation response. Generates DAP, SOAP, or BIRP notes with ICD-10 and CPT suggestions.",
+    short: "PHQ-9/GAD-7 as conversation → scored, safety-flagged clinical notes.",
+    stack: ["React", "FastAPI", "Groq", "Recharts"],
+    url: "https://mind-scribe-six.vercel.app",
+    status: "live",
+    featured: false
+  },
+  {
+    id: "buildify",
+    title: "Buildify",
+    tagline: "AI residential floor-plan generator",
+    category: "AI · Product",
+    tags: ["ai", "product"],
+    description:
+      "A Mixture-of-Experts network sizes rooms, HouseGAN++ proposes the spatial topology, and a constraint packer lays them edge-to-edge on a 2 ft grid that meets IRC minimums. Returns three distinct, buildable plan variants in seconds.",
+    short: "Beds, baths, sqft → three code-compliant floor plans in seconds.",
+    stack: ["Python", "PyTorch", "HouseGAN++", "React"],
+    url: "https://buildify-six.vercel.app",
+    status: "live",
+    featured: false
+  },
+  {
+    id: "replayfix",
+    title: "ReplayFix",
+    tagline: "Session replays → tested code fixes",
+    category: "Agents · Dev tools",
+    tags: ["ai", "infra"],
+    description:
+      "Parses PostHog-style session replays, detects UX anomalies with rules plus IsolationForest, retrieves the relevant code with FAISS, and runs a triage → review → fix chain of Claude agents that drafts a GitHub PR.",
+    short: "Replay events → anomaly → retrieved code → multi-agent draft PR.",
+    stack: ["Python", "Claude", "FAISS", "scikit-learn"],
+    url: "https://github.com/sarvanithin/replayfix",
+    status: "oss",
+    featured: false
   }
+
 ];
+
+// Display order; numbers are assigned from position.
+const PROJECT_ORDER = ["archai", "cgmhe", "chunkkv", "typestub", "cab", "pharmaos", "medrag", "vt", "medguard", "claim", "trial", "openrole", "mindscribe", "buildify", "replayfix"];
+// Grid cards shown under the featured project before "Show all".
+const PROJECTS_INITIAL = 6;
+PROJECTS.sort((a, b) => PROJECT_ORDER.indexOf(a.id) - PROJECT_ORDER.indexOf(b.id));
+PROJECTS.forEach((p, i) => { p.num = String(i + 1).padStart(2, "0"); });
 
 const PROJECT_FILTERS = [
   { id: "all", label: "All" },
   { id: "ai", label: "AI / LLM" },
   { id: "healthcare", label: "Healthcare" },
+  { id: "infra", label: "LLM infra" },
   { id: "data", label: "Data" },
   { id: "product", label: "Product" },
-  { id: "research", label: "Research" }
+  { id: "eval", label: "Evals" }
 ];
 
 const contributionsData = [
@@ -117,14 +252,14 @@ const contributionsData = [
     category: "Portfolio",
     title: "10+ public AI repos",
     detail:
-      "Agents, planning tools, education apps, analytics, guardrails, and RAG stacks — all on one GitHub. Some are portfolio-grade, some are labs, everything is inspectable.",
+      "Agents, planning tools, education apps, analytics, guardrails, and RAG stacks, all on one GitHub. Some are portfolio-grade, some are labs, everything is inspectable.",
     proof: [{ label: "All repos", href: "https://github.com/sarvanithin?tab=repositories" }]
   },
   {
     category: "Shipped products",
     title: "LLM tools & RAG (OSS)",
     detail:
-      "MedGuard, MedRAG, ClinicalTrial Match, Clinical De-identify: example product repos spanning LLM safety, retrieval, matching, and de-ID pipelines — clone and read the implementation.",
+      "MedGuard, MedRAG, ClinicalTrial Match, Clinical De-identify: example product repos spanning LLM safety, retrieval, matching, and de-ID pipelines. Clone them and read the implementation.",
     proof: [
       { label: "MedGuard", href: "https://github.com/sarvanithin/Medguard" },
       { label: "MedRAG", href: "https://github.com/sarvanithin/medrag-toolkit" },
@@ -136,7 +271,7 @@ const contributionsData = [
     category: "PyTorch OSS",
     title: "MIMIC DataLoader",
     detail:
-      "PyTorch-ready datasets for structured clinical prediction tasks — useful pattern for tabular + sequence modeling and for anyone working with MIMIC-style benchmarks.",
+      "PyTorch-ready datasets for structured clinical prediction tasks. A useful pattern for tabular + sequence modeling and for anyone working with MIMIC-style benchmarks.",
     proof: [
       { label: "Repo", href: "https://github.com/sarvanithin/mimic-dataloader" },
       { label: "Commits", href: "https://github.com/sarvanithin/mimic-dataloader/commits?author=sarvanithin" }
@@ -144,10 +279,13 @@ const contributionsData = [
   },
   {
     category: "Public writing",
-    title: "Build notes (LinkedIn)",
+    title: "Thinking out loud (X + LinkedIn)",
     detail:
-      "Short posts when something ships: public dashboards, research-adjacent AI, open source drops, policy-relevant eval work — faster for me than a long-running blog.",
-    proof: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/nithin-sarva/" }]
+      "Takes on agents, evals, RAG failure modes, and healthcare AI on X; ship notes on LinkedIn when something lands. Faster for me than a long-running blog.",
+    proof: [
+      { label: "X", href: "https://x.com/NithinSarva" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/nithinsarva/" }
+    ]
   }
 ];
 
@@ -245,7 +383,7 @@ const VIZ = {
       <div class="browser">
         <div class="browser-bar">
           <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          <div class="url">cgmhe-tool / WHO-UNICEF pilot · 17 sessions</div>
+          <div class="url">mh-eval / openai grant · EQUIP competencies</div>
         </div>
         <div class="browser-body">
           <div class="viz viz-cg">
@@ -295,11 +433,182 @@ const VIZ = {
           <div class="ct-step"><div class="b">4</div>clinician review · 2 exclusion flags</div>
         </div>
       </div>
+    </div>`,
+
+  chunkkv: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">chunkkv / rag · qwen2.5-7b · L40S</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-med">
+          <div class="viz-label">RAG ACCURACY vs RECOMPUTE</div>
+          <div class="med-row"><span class="t">blend 15%</span><span class="b" style="--w:92%"></span><span>92.2</span></div>
+          <div class="med-row"><span class="t">blend 30%</span><span class="b" style="--w:96%"></span><span>95.7</span></div>
+          <div class="med-row"><span class="t">blend 50%</span><span class="b" style="--w:98%"></span><span>98.3</span></div>
+          <div class="med-row"><span class="t">full prefill</span><span class="b" style="--w:100%"></span><span>100</span></div>
+          <div class="med-row warn"><span class="t">TTFT speedup</span><span class="b" style="--w:50%"></span><span>~2x</span></div>
+        </div>
+      </div>
+    </div>`,
+
+  typestub: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">typestub / gen-ts · github.d.ts</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-cp">
+          <div class="viz-label">INFERRED STUB</div>
+          <div class="cp-line"><span class="k">interface</span><span class="v">PullRequest {</span></div>
+          <div class="cp-line add"><span class="k">number</span><span class="v">+ number</span></div>
+          <div class="cp-line add"><span class="k">title</span><span class="v">+ string</span></div>
+          <div class="cp-line add"><span class="k">labels</span><span class="v">+ Label[]</span></div>
+          <div class="cp-line sus"><span class="k">merged</span><span class="v">⚑ always false</span></div>
+          <div class="cp-line"><span class="k">field acc</span><span class="v">99.4%</span></div>
+        </div>
+      </div>
+    </div>`,
+
+  cab: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">clinicalagent-bench / report</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-med">
+          <div class="viz-label">DOMAIN SCORES</div>
+          <div class="med-row"><span class="t">billing</span><span class="b" style="--w:82%"></span><span>pass</span></div>
+          <div class="med-row"><span class="t">triage</span><span class="b" style="--w:74%"></span><span>pass</span></div>
+          <div class="med-row"><span class="t">prior auth</span><span class="b" style="--w:68%"></span><span>pass</span></div>
+          <div class="med-row warn"><span class="t">refusal F1</span><span class="b" style="--w:55%"></span><span>flag</span></div>
+          <div class="med-row warn"><span class="t">equity</span><span class="b" style="--w:60%"></span><span>flag</span></div>
+        </div>
+      </div>
+    </div>`,
+
+  pharmaos: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">pharma-os-gilt.vercel.app / ingest</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-ct">
+          <div class="viz-label">INGESTION PIPELINE</div>
+          <div class="ct-step on"><div class="b">1</div>patent_CN.pdf · language: zh</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step on"><div class="b">2</div>classified · patent · 12 fields</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step on"><div class="b">3</div>each field quoted from source</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step"><div class="b">4</div>audit hash-chain · verified</div>
+        </div>
+      </div>
+    </div>`,
+
+  medrag: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">medrag / query</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-ct">
+          <div class="viz-label">RETRIEVAL → ANSWER</div>
+          <div class="ct-step on"><div class="b">1</div>BM25 + FAISS · top 40</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step on"><div class="b">2</div>RRF fusion · top 8</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step on"><div class="b">3</div>answer with [PMID:38291044]</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step"><div class="b">4</div>unsupported claim rejected</div>
+        </div>
+      </div>
+    </div>`,
+
+  openrole: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">openrole-intelligence.vercel.app</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-cp">
+          <div class="viz-label">SPONSORSHIP EVIDENCE</div>
+          <div class="cp-line add"><span class="k">ML Engineer</span><span class="v">+ Tier A · explicit offer</span></div>
+          <div class="cp-line add"><span class="k">Data Scientist</span><span class="v">+ Tier A · explicit offer</span></div>
+          <div class="cp-line"><span class="k">Platform Eng</span><span class="v">Tier C · ambiguous</span></div>
+          <div class="cp-line sus"><span class="k">AI Researcher</span><span class="v">⚑ Tier E · denied</span></div>
+          <div class="cp-line"><span class="k">source</span><span class="v">employer careers page</span></div>
+        </div>
+      </div>
+    </div>`,
+
+  mindscribe: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">mind-scribe / phq-9</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-med">
+          <div class="viz-label">PHQ-9 ITEM SCORES</div>
+          <div class="med-row"><span class="t">interest</span><span class="b" style="--w:33%"></span><span>1</span></div>
+          <div class="med-row"><span class="t">mood</span><span class="b" style="--w:66%"></span><span>2</span></div>
+          <div class="med-row"><span class="t">sleep</span><span class="b" style="--w:66%"></span><span>2</span></div>
+          <div class="med-row"><span class="t">energy</span><span class="b" style="--w:33%"></span><span>1</span></div>
+          <div class="med-row warn"><span class="t">item 9</span><span class="b" style="--w:33%"></span><span>flag</span></div>
+        </div>
+      </div>
+    </div>`,
+
+  buildify: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">buildify-six.vercel.app · 3 bd / 2 ba</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-arch">
+          <div class="viz-label">PLAN · VARIANT B</div>
+          <div class="arch-node" style="top:28%;left:10%">Garage</div>
+          <div class="arch-node accent" style="top:28%;left:38%">Living</div>
+          <div class="arch-node" style="top:28%;left:66%">Kitchen</div>
+          <div class="arch-node" style="top:60%;left:10%">Bed 1</div>
+          <div class="arch-node" style="top:60%;left:38%">Bath</div>
+          <div class="arch-node" style="top:60%;left:66%">Bed 2</div>
+        </div>
+      </div>
+    </div>`,
+
+  replayfix: () => `
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="url">replayfix / session 8f2c</div>
+      </div>
+      <div class="browser-body">
+        <div class="viz viz-ct">
+          <div class="viz-label">AGENT CHAIN</div>
+          <div class="ct-step on"><div class="b">1</div>rage-click on #checkout · sev 0.91</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step on"><div class="b">2</div>retrieved 3 code chunks</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step on"><div class="b">3</div>triage → review → fix</div>
+          <div class="ct-arrow"></div>
+          <div class="ct-step"><div class="b">4</div>draft PR opened</div>
+        </div>
+      </div>
     </div>`
 };
 
 // ---------- State + rendering ----------
 let currentFilter = "all";
+let showAllProjects = false;
 
 function projectMatchesFilter(p, f) {
   return f === "all" || p.tags.includes(f);
@@ -370,9 +679,12 @@ function renderGrid() {
   if (!grid) return;
   const featured = PROJECTS.find((p) => p.featured);
   const hideFeaturedFromGrid = currentFilter === "all" && featured;
-  const items = PROJECTS.filter((p) => projectMatchesFilter(p, currentFilter)).filter(
+  const matching = PROJECTS.filter((p) => projectMatchesFilter(p, currentFilter)).filter(
     (p) => !(hideFeaturedFromGrid && p.id === featured.id)
   );
+  const collapsed = currentFilter === "all" && !showAllProjects && matching.length > PROJECTS_INITIAL;
+  const items = collapsed ? matching.slice(0, PROJECTS_INITIAL) : matching;
+  renderShowAll(currentFilter === "all" && matching.length > PROJECTS_INITIAL);
 
   grid.innerHTML = items
     .map((p) => {
@@ -395,12 +707,29 @@ function renderGrid() {
                 ${visible.map((s) => `<span class="pill">${escapeHtml(s)}</span>`).join("")}
                 ${extra > 0 ? `<span class="pill">+${extra}</span>` : ""}
               </div>
-              <span class="card-link">visit ${ARROW_OUT_SVG}</span>
+              <span class="card-link">${p.status === "live" ? "visit" : "code"} ${ARROW_OUT_SVG}</span>
             </div>
           </div>
         </a>`;
     })
     .join("");
+}
+
+function renderShowAll(visible) {
+  const btn = document.getElementById("proj-show-all");
+  if (!btn) return;
+  btn.hidden = !visible;
+  btn.setAttribute("aria-expanded", String(showAllProjects));
+  btn.textContent = showAllProjects ? "Show fewer projects" : `Show all ${PROJECTS.length} projects`;
+}
+
+function setupShowAll() {
+  const btn = document.getElementById("proj-show-all");
+  btn?.addEventListener("click", () => {
+    showAllProjects = !showAllProjects;
+    renderGrid();
+    if (!showAllProjects) document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  });
 }
 
 // ---------- Contributions (unchanged) ----------
@@ -485,6 +814,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFilters();
   renderFeatured();
   renderGrid();
+  setupShowAll();
   renderContributions();
   setupThemeToggle();
   setupMenuToggle();
